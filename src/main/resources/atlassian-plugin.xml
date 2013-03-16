@@ -1,23 +1,45 @@
-<atlassian-plugin key="${project.groupId}.${project.artifactId}" name="${project.name}" plugins-version="2">
-    <plugin-info>
-        <description>${project.description}</description>
-        <version>${project.version}</version>
-        <vendor name="${project.organization.name}" url="${project.organization.url}" />
-        <param name="plugin-icon">images/pluginIcon.png</param>
-        <param name="plugin-logo">images/pluginLogo.png</param>
-    </plugin-info>
+<atlassian-plugin key="${project.groupId}.${project.artifactId}"
+	name="${project.name}" plugins-version="2">
+	<plugin-info>
+		<description>${project.description}</description>
+		<version>${project.version}</version>
+		<vendor name="${project.organization.name}" url="${project.organization.url}" />
+		<param name="plugin-icon">images/pluginIcon.png</param>
+		<param name="plugin-logo">images/pluginLogo.png</param>
+	</plugin-info>
 
-    <!-- add our i18n resource -->
-    <resource type="i18n" name="i18n" location="confluence-blueprint-example"/>
-    
-    <!-- add our web resources -->
-    <web-resource key="confluence-blueprint-example-resources" name="confluence-blueprint-example Web Resources">
-        <dependency>com.atlassian.auiplugin:ajs</dependency>
-        
-        <resource type="download" name="confluence-blueprint-example.css" location="/css/confluence-blueprint-example.css"/>
-        <resource type="download" name="confluence-blueprint-example.js" location="/js/confluence-blueprint-example.js"/>
-        <resource type="download" name="images/" location="/images"/>
+	<!-- add our i18n resource -->
+	<resource type="i18n" name="i18n" location="confluence-blueprint-example" />
 
-        <context>confluence-blueprint-example</context>
-    </web-resource>
+	<!-- add our web resources -->
+	<web-resource key="confluence-blueprint-example-resources"
+		name="confluence-blueprint-example Web Resources">
+		<dependency>com.atlassian.auiplugin:ajs</dependency>
+
+		<resource type="download" name="confluence-blueprint-example.css"
+			location="/css/confluence-blueprint-example.css" />
+		<resource type="download" name="confluence-blueprint-example.js"
+			location="/js/confluence-blueprint-example.js" />
+		<resource type="download" name="images/" location="/images" />
+
+		<context>confluence-blueprint-example</context>
+	</web-resource>
+
+	<content-template key="hascode-blueprint-template"
+		template-title-key="hascode.sample-template.title">
+		<resource name="template" type="download"
+			location="com/hascode/plugin/confluence/template/xml/sample-template.xml" />
+	</content-template>
+
+	<web-item key="create-by-sample-template" i18n-name-key="hascode.create-link.title"
+		section="system.create.dialog/content">
+		<description key="
+		hascode.create-link.description" />
+		<resource name="icon" type="download"
+			location="com/hascode/plugin/confluence/image/preview-generic-template.png" />
+		<param name="blueprintKey" value="hascode-blueprint" />
+	</web-item>
+
+	<blueprint key="hascode-blueprint" content-template-key="hascode-blueprint-template"
+		index-key="hascode-index" />
 </atlassian-plugin>
