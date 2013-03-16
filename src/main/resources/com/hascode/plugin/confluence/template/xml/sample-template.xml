@@ -1,1 +1,27 @@
-<p>body of template</p>
+<div class="contentLayout"
+	data-atlassian-layout="{&quot;name&quot;:&quot;pagelayout-two-left&quot;,&quot;columns&quot;:[&quot;aside&quot;,&quot;large&quot;],&quot;header&quot;:true,&quot;footer&quot;:true}">
+	<div class="header">
+		<div class="innerCell">
+			<h1>Template Header</h1>
+			<small>Document created: <at:var at:name="creationDate" /></small>
+		</div>
+	</div>
+	<div class="columnLayout twoColumns">
+		<div class="cell aside">
+			<div class="innerCell">
+				<h2>Subpages</h2>
+				<p><ac:macro ac:name="pagetree" /></p>
+			</div>
+		</div>
+		<div class="cell large">
+			<div class="innerCell">
+				<p><ac:macro ac:name="loremipsum" /></p>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="innerCell">
+			<hr />
+		</div>
+	</div>
+</div>

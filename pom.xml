@@ -76,7 +76,7 @@
 					<productDataVersion>${confluence.data.version}</productDataVersion>
 					<instructions>
 						<Import-Package>
-							com.atlassian.confluence.plugins.createcontent.extensions,
+							com.atlassian.confluence.plugins.createcontent.extensions;version="0.0.0",
 							*
 						</Import-Package>
 					</instructions>

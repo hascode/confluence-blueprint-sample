@@ -29,14 +29,15 @@
 		template-title-key="hascode.sample-template.title">
 		<resource name="template" type="download"
 			location="com/hascode/plugin/confluence/template/xml/sample-template.xml" />
+		<context-provider
+			class="com.hascode.plugin.confluence.component.CustomContextProvider" />
 	</content-template>
 
 	<web-item key="create-by-sample-template" i18n-name-key="hascode.create-link.title"
 		section="system.create.dialog/content">
-		<description key="
-		hascode.create-link.description" />
+		<description key="hascode.create-link.description" />
 		<resource name="icon" type="download"
-			location="com/hascode/plugin/confluence/image/preview-generic-template.png" />
+			location="/com/hascode/plugin/confluence/image/hascode-macro-logo.png" />
 		<param name="blueprintKey" value="hascode-blueprint" />
 	</web-item>
 
