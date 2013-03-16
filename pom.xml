@@ -30,7 +30,7 @@
 			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
-		<!-- just to disable referenced older version from junit-dep to be included .. -->
+		<!-- avoid possibly referenced older versions from junit-dep to be included .. -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit-dep</artifactId>

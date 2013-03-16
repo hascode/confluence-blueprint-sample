@@ -11,20 +11,6 @@
 	<!-- add our i18n resource -->
 	<resource type="i18n" name="i18n" location="confluence-blueprint-example" />
 
-	<!-- add our web resources -->
-	<web-resource key="confluence-blueprint-example-resources"
-		name="confluence-blueprint-example Web Resources">
-		<dependency>com.atlassian.auiplugin:ajs</dependency>
-
-		<resource type="download" name="confluence-blueprint-example.css"
-			location="/css/confluence-blueprint-example.css" />
-		<resource type="download" name="confluence-blueprint-example.js"
-			location="/js/confluence-blueprint-example.js" />
-		<resource type="download" name="images/" location="/images" />
-
-		<context>confluence-blueprint-example</context>
-	</web-resource>
-
 	<content-template key="hascode-blueprint-template"
 		template-title-key="hascode.sample-template.title">
 		<resource name="template" type="download"
