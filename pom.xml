@@ -93,7 +93,7 @@
 	</build>
 
 	<properties>
-		<confluence.version>5.1-m2</confluence.version>
+		<confluence.version>5.0.3</confluence.version>
 		<confluence.data.version>4.3.7</confluence.data.version>
 		<amps.version>4.1.5</amps.version>
 		<plugin.testrunner.version>1.1</plugin.testrunner.version>
